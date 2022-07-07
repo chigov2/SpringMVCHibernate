@@ -23,21 +23,15 @@
         <tH>Salary</tH>
 
         <c:forEach var="emp" items="${allEmps}">
-
     <tr>
-        <td>${emp.name}</td>
-        <td>${emp.surname}</td>
-        <td>${emp.department}</td>
-        <td>${emp.salary}</td>
-
+        <td>${emp.name}</td><td>${emp.surname}</td><td>${emp.department}</td><td>${emp.salary}</td>
     </tr>
-
-
     </c:forEach>
-
     </tr>
-
 
 </table>
+
+<br>
+<input type="button" value="add" onclick="window.location.href-''"/>
 </body>
 </html>
