@@ -21,11 +21,17 @@
         <tH>Surmame</tH>
         <tH>Department</tH>
         <tH>Salary</tH>
+        <tH>Operations</tH>
+    <tr/>
 
         <c:forEach var="emp" items="${allEmps}">
-    <tr/>
+            <c:url var="updateButton" value="/updateInfo">
+                <c:param name="empId" value="${emp.id}"/>
+            </c:url>
+
     <tr>
         <td>${emp.name}</td><td>${emp.surname}</td><td>${emp.department}</td><td>${emp.salary}</td>
+        <td><input type="button" value="Update" onclick="window.location.href='${updateButton}'"/> </td>
     </tr>
     </c:forEach>
 
