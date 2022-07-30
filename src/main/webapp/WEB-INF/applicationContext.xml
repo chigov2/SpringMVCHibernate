@@ -31,10 +31,15 @@
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
-        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/my_db?useSSL=false&amp;serverTimezone=UTC"/>
-        <property name="user" value="bestuser"/>
-        <property name="password" value="bestuser"/>
+        <property name="driverClass" value="org.postgresql.Driver"/>
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/my_db?useSSL=false"/>
+        <property name="user" value="postgres"/>
+        <property name="password" value="yadro#14#"/>
+
+<!--        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>-->
+<!--        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/my_db?useSSL=false&amp;serverTimezone=UTC"/>-->
+<!--        <property name="user" value="bestuser"/>-->
+<!--        <property name="password" value="bestuser"/>-->
     </bean>
 
     <bean id="sessionFactory"
